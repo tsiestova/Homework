@@ -84,8 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const secInMonth = getMonth(1);
     const resultMonth = document.querySelector('.result-month');
     resultMonth.innerHTML = `1 month is ${secInMonth} seconds`;
-
-
 });
 
 
