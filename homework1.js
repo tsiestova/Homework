@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
     alert([a, b].join(" "));
 
     // task 4
+
+    let a;
     const newObject = {
         'String': 'someText',
         'Number': 5,
