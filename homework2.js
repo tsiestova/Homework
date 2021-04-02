@@ -97,17 +97,45 @@ if (newArr[2] === Math.sqrt(newArr[0] * newArr[0] + newArr[1] * newArr[1])) {
 // //task7
 
 let hour = new Date().getHours();
+let period;
+
 
 if (hour >= 23 || hour < 5) {
-    alert('Доброї ночі!')
+    alert('Доброї ночі!');
+    period = 'night';
 }
 if (hour >= 5 && hour < 11) {
-    alert('Доброго ранку!')
+    alert('Доброго ранку!');
+    period = 'morning';
 }
 if (hour >= 11 && hour < 17) {
-    alert('Добрий день!')
+    alert('Добрий день!');
+    period = 'day';
 }
 if (hour >= 17 && hour < 23) {
-    alert('Доброго вечора!')
+    alert('Доброго вечора!');
+    period = 'evening';
+}
+
+
+switch (period) {
+    case "night":
+        alert('Доброї ночі!');
+        break;
+
+    case "morning":
+        alert('Доброго ранку!');
+        break;
+
+    case "day":
+        alert('Добрий день!');
+        break;
+
+    case "evening":
+        alert('Доброго вечора!');
+        break;
+
+    default:
+        console.log('incorrect data');
 }
 
