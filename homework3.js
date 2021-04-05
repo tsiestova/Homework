@@ -114,4 +114,4 @@ function toUpperCase(str) {
 }
 
 
-console.log(toUpperCase('Ilove java script'));
+console.log(toUpperCase('i love java script'));
