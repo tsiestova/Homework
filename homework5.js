@@ -3,8 +3,8 @@
 function propsCount(currentObject) {
     let count = 0;
 
-    for(let property in currentObject) {
-        if(property) {
+    for (let property in currentObject) {
+        if (property) {
             count++
         }
     }
@@ -36,12 +36,12 @@ function showProps(obj) {
     const arrProperty = [];
     const arrValue = [];
 
-    for(let property in obj) {
+    for (let property in obj) {
         arrProperty.push(property);
         arrValue.push(obj[property]);
     }
 
-        return [arrProperty, arrValue];
+    return [arrProperty, arrValue];
 }
 
 console.log(showProps(obj));
@@ -53,7 +53,7 @@ console.log(showProps(obj));
 
 class Person {
 
-    constructor (name, surname) {
+    constructor(name, surname) {
         this.name = name;
         this.surname = surname;
     }
@@ -146,13 +146,71 @@ arr.push(worker1, worker2, worker3);
 
 arr.sort((a, b) => b.salaryExp - a.salaryExp);
 
-for(let i = 0; i < arr.length; i ++) {
+for (let i = 0; i < arr.length; i++) {
     console.log(arr[i].fullName + ': ' + arr[i].salaryExp);
 }
 
 
+// task 5
+
+class GeometricFigure {
+
+    getArea() {
+        return 0;
+    }
+
+    toString() {
+        return Object.getPrototypeOf(this).constructor.name;
+    }
+}
+
+class Triangle extends GeometricFigure {
+    constructor(base, height) {
+        super();
+        this.base = base;
+        this.height = height;
+    }
+
+    getArea() {
+        return (this.base * this.height) / 2;
+    }
+}
 
 
+class Square extends GeometricFigure {
+
+    constructor(side) {
+        super();
+        this.side = side;
+    }
+
+    getArea() {
+        return this.side * this.side;
+    }
+}
+
+class Circle extends GeometricFigure {
+    constructor(radius) {
+        super();
+        this.radius = radius;
+    }
+
+    getArea() {
+        return Math.PI * this.radius * this.radius;
+    }
+}
+
+function handleFigures(figures) {
+    figures.forEach(function (figure) {
+        if (figure instanceof GeometricFigure) {
+            console.log(`Geometric figure: ${figure.toString()} - area ${figure.getArea()}`);
+        }
+    })
+}
+
+const figures = [new Triangle(4, 5), new Square(7), new Circle(5)];
+
+console.log(handleFigures(figures));
 
 
 
