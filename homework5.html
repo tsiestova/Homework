@@ -5,7 +5,18 @@
     <title>Title</title>
 </head>
 <body>
+<p id ='text'>I learning JavaScript events!</p>
+<div>
+    <button onclick="changeCSS()">Change style!</button>
+</div>
 
-<script src="homework5.js"></script>
+<script src="homework5.js">
+    function changeCSS() {
+        const text = document.getElementById('text');
+        text.style.fontSize = "20px";
+        text.fontSize = 'Comic Sans MS';
+        text.color = 'orange';
+    }
+</script>
 </body>
 </html>
